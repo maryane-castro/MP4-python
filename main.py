@@ -6,7 +6,7 @@ def menu():
     
     quant = int(input('Quantas musicas quer baixar? '))
     while quant != 0:
-        link = input(f'Digite o link da musica {quant}: ')
+        link = input(f'Falta {quant} musicas para você colocar o link: ')
         lista.append(link)
         quant -= 1
 
