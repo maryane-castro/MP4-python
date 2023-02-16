@@ -1,7 +1,7 @@
 from pytube import YouTube
 
 
-lista = ['https://www.youtube.com/watch?v=MwpMEbgC7DA', 'https://www.youtube.com/watch?v=fXw0jcYbqdo']
+lista = []
 def menu():
     
     quant = int(input('Quantas musicas quer baixar? '))
