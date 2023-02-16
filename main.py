@@ -19,11 +19,6 @@ def menu():
         print(lista[quant])
         quant += 1
 
-    
-
-    
-
-
 menu()
 
 '''
