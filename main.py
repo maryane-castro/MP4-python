@@ -15,7 +15,7 @@ def menu():
     while quant != len(lista):
         audio = YouTube(lista[quant])
         audio = audio.streams.get_audio_only()
-        audio.download()
+        audio.download(output_path='/home/aluno/Documentos/GitHub/testeM/musicas')
         print(lista[quant])
         quant += 1
 
