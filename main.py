@@ -1,5 +1,5 @@
 from pytube import YouTube
-#import PySimpleGUI
+
 
 lista = []
 def menu():
@@ -15,7 +15,7 @@ def menu():
     while quant != len(lista):
         audio = YouTube(lista[quant])
         audio = audio.streams.get_audio_only()
-        audio.download(output_path='/home/aluno/Documentos/GitHub/testeM/musicas')
+        audio.download(output_path='C:\\Users\\kookp\\OneDrive\\Documentos\\vscode\\testeM\\musicas')
         print(lista[quant])
         quant += 1
 
