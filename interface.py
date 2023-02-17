@@ -1,5 +1,6 @@
 from pytube import YouTube
 import PySimpleGUI as sg
+from time import sleep
 lista = []
 
 sg.theme('BlueMono')
@@ -18,10 +19,14 @@ window = sg.Window('Pytube MP4', tela)
 while True:
     event, values = window.read()
     if event == "Confirmar":
-        print('ok')
-        lista.append(values['link'])
-        window['saida'].update('Musica ok!')
-        print(lista)
+        if values['link'] != '':
+            print('ok')
+            window['saida'].update('Musica ok!' )
+            lista.append(values['link'])
+            print(lista)
+        else:
+            window['saida'].update('Vazio' )
+
 
 
 
@@ -29,6 +34,7 @@ while True:
     if event == 'Baixar todas as confirmadas':
         print('baixar')
         lista.append(values['link'])
+        
         quant = 0
         while quant != len(lista):
             audio = YouTube(lista[quant])
