@@ -1,5 +1,5 @@
 from pytube import YouTube
-
+import pathlib
 
 lista = []
 def menu():
@@ -21,8 +21,10 @@ def menu():
 
     local = input('Digite o local da pasta para baixar: ')
 
+
     while local == '':
         local = input('É obrigatório digitar o local da pasta para baixar! ')
+        
 
     while quant != 0:
         link = input(f'Falta {quant} musicas para você colocar o link: ')
