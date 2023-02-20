@@ -1,6 +1,5 @@
 from pytube import YouTube
 import PySimpleGUI as sg
-from time import sleep
 lista = []
 
 sg.theme('BlueMono')
