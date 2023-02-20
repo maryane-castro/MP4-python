@@ -1,9 +1,9 @@
 from pytube import YouTube
-import pathlib
+
 
 lista = []
 def menu():
-    
+
     while True:
         quant = input('Quantas musicas quer baixar? ')
         if quant == '':
@@ -20,18 +20,16 @@ def menu():
                     break
 
     local = input('Digite o local da pasta para baixar: ')
-
     while local == '':
         '''local = input('É obrigatório digitar o local da pasta para baixar! ')'''
         local = 'C:\\Users\\kookp\\OneDrive\\Documentos\\vscode\\testeM\\musicas'
         
 
+
     while quant != 0:
         link = input(f'Falta {quant} musicas para você colocar o link: ')
         lista.append(link)
         quant -= 1
-
-    
 
     while quant != len(lista):
         audio = YouTube(lista[quant])
