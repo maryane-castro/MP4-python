@@ -21,9 +21,9 @@ def menu():
 
     local = input('Digite o local da pasta para baixar: ')
 
-
     while local == '':
-        local = input('É obrigatório digitar o local da pasta para baixar! ')
+        '''local = input('É obrigatório digitar o local da pasta para baixar! ')'''
+        local = 'C:\\Users\\kookp\\OneDrive\\Documentos\\vscode\\testeM\\musicas'
         
 
     while quant != 0:
@@ -39,7 +39,6 @@ def menu():
         audio.download(output_path='C:\\Users\\kookp\\OneDrive\\Documentos\\vscode\\testeM\\musicas')
         print(lista[quant])
         quant += 1
-
 menu()
 
 '''
