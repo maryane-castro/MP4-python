@@ -5,13 +5,21 @@ lista = []
 def menu():
     
     while True:
-        quant = int(input('Quantas musicas quer baixar? '))
-        if quant <= 0:
-            continue
+        quant = input('Quantas musicas quer baixar? ')
+        if quant == '':
+            print('Não pode ser vazio!')
         else:
-            break
+            quant1 = quant.isnumeric()
+            if quant1 == False:
+                print('Precisa ser númerico')
+            else:
+                quant = int(quant)
+                if quant <= 0:
+                    print('Precisa ser maior que 0')
+                else:
+                    break
 
-    local = input('Digite o local da pasta para baixar!')
+    local = input('Digite o local da pasta para baixar: ')
 
     while local == '':
         local = input('É obrigatório digitar o local da pasta para baixar! ')
