@@ -5,14 +5,7 @@ lista = []
 def menu():
     
     while True:
-        try:
-            quant = int(input('Quantas musicas quer baixar? '))
-            
-        except ValueError:
-            print('Precisa ser número')
-            quant = input('Quantas musicas quer baixar?')
-            continue
-
+        quant = int(input('Quantas musicas quer baixar? '))
         if quant <= 0:
             continue
         else:
