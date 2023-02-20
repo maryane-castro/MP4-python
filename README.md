@@ -4,3 +4,5 @@
 
 
 pyinstaller --onefile --noconsole  .\interface.py
+
+pip install cx-Freeze
