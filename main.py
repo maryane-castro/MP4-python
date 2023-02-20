@@ -5,6 +5,9 @@ lista = []
 def menu():
     
     quant = int(input('Quantas musicas quer baixar? '))
+    local = input('Digite o local da pasta para baixar!')
+    while local == '':
+        local = input('É obrigatório digitar o local da pasta para baixar! ')
     while quant != 0:
         link = input(f'Falta {quant} musicas para você colocar o link: ')
         lista.append(link)
