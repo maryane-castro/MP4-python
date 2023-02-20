@@ -4,10 +4,25 @@ from pytube import YouTube
 lista = []
 def menu():
     
-    quant = int(input('Quantas musicas quer baixar? '))
+    while True:
+        try:
+            quant = int(input('Quantas musicas quer baixar? '))
+            
+        except ValueError:
+            print('Precisa ser número')
+            quant = input('Quantas musicas quer baixar?')
+            continue
+
+        if quant <= 0:
+            continue
+        else:
+            break
+
     local = input('Digite o local da pasta para baixar!')
+
     while local == '':
         local = input('É obrigatório digitar o local da pasta para baixar! ')
+
     while quant != 0:
         link = input(f'Falta {quant} musicas para você colocar o link: ')
         lista.append(link)
