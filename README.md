@@ -3,5 +3,6 @@
 
 
 instalador de biblioteca
-    spyinstaller --onefile --noconsole  .\interface.py
+    s
+    pyinstaller --onefile --noconsole  .\interface.py
 
